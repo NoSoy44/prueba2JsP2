@@ -1,26 +1,26 @@
 //FORMULARIO
-        // Almacenar los datos del formulario
-        let titleValue = "";
-        let messageValue = "";
+// Almacenar los datos del formulario
+let titleValue = "";
+let messageValue = "";
 
-        // Obtener referencias a los elementos del DOM
-        const btnForm = document.getElementById('sub');
-        const form = document.getElementById('Title');
-        const form2 = document.getElementById('Message');
+// Obtener valor del DOM
+const btnForm = document.getElementById('sub');
+const form = document.getElementById('Title');
+const form2 = document.getElementById('Message');
 
-        // Función para guardar los datos del formulario
-        function saveFormData() {
-            titleValue = form.value;
-            messageValue = form2.value;
-        }
+// Función para guardar los datos del formulario
+function saveFormData() {
+  titleValue = form.value;
+  messageValue = form2.value;
+}
 
-        // Event listener para el botón de submit
-        btnForm.addEventListener('click', function(event) {
-          event.preventDefault(); // 
-          saveFormData();
-            // Mostrar un mensaje para confirmar que los datos se guardaron
-            alert('Datos guardados: ' + titleValue + ', ' + messageValue);
-        });
+// Event listener para submit
+btnForm.addEventListener('click', function (event) {
+  event.preventDefault(); // 
+  saveFormData();
+  // Mensaje para confirmar datos guardados
+  alert('Datos guardados: ' + titleValue + ', ' + messageValue);
+});
 
 
 //Funcion 1
@@ -31,16 +31,16 @@ const miVentanaEmergente = document.getElementById('ventanaEmergente')
 //Agregar un observador sobre el modal
 
 miVentanaEmergente.addEventListener('show.bs.modal', function (event) {
-    console.log('Se esta abriendo el modal');
+  console.log('Se esta abriendo el modal');
 
-    //reconoces el elemento que habilita el evento modal
-    let boton = event.relatedTarget //eitiquetado relacionado al evento
+  //reconocer el elemento que habilita el evento modal
+  let boton = event.relatedTarget //eitiquetado relacionado al evento
 
-    let mensaje = boton.getAttribute('data-titulo')
-    let contenido = boton.getAttribute('data-contenido')
+  let mensaje = boton.getAttribute('data-titulo')
+  let contenido = boton.getAttribute('data-contenido')
 
-    document.getElementById('tituloModal').innerText = titleValue;//Usando un id
-    document.querySelector('.modal-body').innerText = messageValue;//Usando una clase
+  document.getElementById('tituloModal').innerText = titleValue;//Usando un id
+  document.querySelector('.modal-body').innerText = messageValue;//Usando una clase
 })
 
 //Funcion 2
