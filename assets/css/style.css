@@ -1,0 +1,15 @@
+.cnot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+.contenedores{
+    background-color: #d3d3d3;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+}
